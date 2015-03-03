@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ManejadorDeDatos.Core
+{
+    public class ADMarchivos
+    {
+
+        private string rutaArchivo;
+        private string archivo;
+            public ADMarchivos()
+            {
+
+            }
+
+            public ADMarchivos(string ruta, string archivo)
+            {
+                    this.rutaArchivo = ruta;
+                    this.archivo = archivo;
+
+            }
+
+        //crud
+            public static void CrearArchivo(string nombreArchivo)
+            {
+           
+                var BD = File.CreateText(nombreArchivo+".txt");
+                BD.Close();
+        
+            }
+
+
+            public static void reNombrar(string nombreArchivo,string nuevoNombre) 
+            {
+                
+                File.Move(nombreArchivo, nuevoNombre);
+        
+            }
+    }
+}
