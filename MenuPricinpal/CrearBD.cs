@@ -20,6 +20,18 @@ namespace MenuPricinpal
         private void button1_Click(object sender, EventArgs e)
         {
             ManejadorDeDatos.Core.ADMarchivos.CrearArchivo(textBox1.Text);
+            MessageBox.Show("¡Creada Con exito!");
+            DialogResult result = MessageBox.Show("¿Desea crear otro archivo?", "Salir", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                
+            }
+            else if (result == DialogResult.No)
+            {
+                this.Close();
+            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
