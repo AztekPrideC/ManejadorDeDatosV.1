@@ -22,5 +22,11 @@ namespace MenuPricinpal
             CrearBD nuevaPestaña = new CrearBD();
             nuevaPestaña.Show();
         }
+
+        private void renombrarArchivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Rename nuevaPestaña = new Rename();
+            nuevaPestaña.Show();
+        }
     }
 }

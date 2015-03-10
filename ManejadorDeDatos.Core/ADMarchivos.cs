@@ -39,7 +39,7 @@ namespace ManejadorDeDatos.Core
             public static void reNombrar(string nombreArchivo,string nuevoNombre) 
             {
                 
-                File.Move(nombreArchivo, nuevoNombre);
+                File.Move(nombreArchivo+".txt", nuevoNombre+".txt");
         
             }
     }
