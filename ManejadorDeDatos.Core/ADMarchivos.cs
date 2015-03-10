@@ -42,5 +42,19 @@ namespace ManejadorDeDatos.Core
                 File.Move(nombreArchivo+".txt", nuevoNombre+".txt");
         
             }
+
+
+            public static string abrirArchivo(string ruta) 
+            {
+                string res = "";
+                System.IO.StreamReader file = new System.IO.StreamReader(ruta);
+                res = file.ReadToEnd();
+                file.Close();
+                return res;
+            
+            
+            
+            }
+
     }
 }

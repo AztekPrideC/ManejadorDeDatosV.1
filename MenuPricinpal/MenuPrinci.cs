@@ -28,5 +28,14 @@ namespace MenuPricinpal
             Rename nuevaPestaña = new Rename();
             nuevaPestaña.Show();
         }
+
+        private void abrirArchivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = openFileDialog1.ShowDialog(this);
+            textBox1.Text = "";
+            textBox1.Text += ManejadorDeDatos.Core.ADMarchivos.abrirArchivo(openFileDialog1.FileName);
+
+        }
     }
 }

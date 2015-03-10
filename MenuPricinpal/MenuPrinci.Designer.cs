@@ -32,8 +32,10 @@
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renombrarArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,12 +72,7 @@
             this.abrirArchivoToolStripMenuItem.Name = "abrirArchivoToolStripMenuItem";
             this.abrirArchivoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.abrirArchivoToolStripMenuItem.Text = "Abrir Archivo";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.abrirArchivoToolStripMenuItem.Click += new System.EventHandler(this.abrirArchivoToolStripMenuItem_Click);
             // 
             // renombrarArchivoToolStripMenuItem
             // 
@@ -84,11 +81,30 @@
             this.renombrarArchivoToolStripMenuItem.Text = "Renombrar Archivo";
             this.renombrarArchivoToolStripMenuItem.Click += new System.EventHandler(this.renombrarArchivoToolStripMenuItem_Click);
             // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Text = "Editar";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 27);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(242, 138);
+            this.textBox1.TabIndex = 1;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
@@ -108,6 +124,8 @@
         private System.Windows.Forms.ToolStripMenuItem abrirArchivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renombrarArchivoToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

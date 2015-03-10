@@ -31,6 +31,8 @@ namespace MenuPricinpal
             {
 
                 ManejadorDeDatos.Core.ADMarchivos.reNombrar(txt1.Text,txt2.Text);
+                txt1.Text = "";
+                txt2.Text = "";
 
             }
             else if (result == DialogResult.No)
